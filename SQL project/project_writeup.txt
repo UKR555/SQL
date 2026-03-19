@@ -1,0 +1,14 @@
+Employee Payroll Management System - SQL Skills Application
+
+I built this payroll management system to practice and demonstrate my SQL skills. The project required designing a complete database solution from scratch and implementing complex business logic using SQL queries.
+
+First, I designed the database schema with four interconnected tables: departments, employees, salaries, and attendance. I normalized the structure to avoid data redundancy and used foreign keys to maintain referential integrity. This ensured data consistency and made the database scalable. I added indexes on frequently queried columns like department_id and employee_id to optimize query performance.
+
+The most challenging part was implementing the progressive tax calculation system using CASE statements. I had to calculate taxes across different income slabs where each slab has a different tax rate. The logic required nested CASE statements to check which tax bracket each employee falls into, then calculate the tax amount accordingly. This taught me how to handle complex conditional logic in SQL and apply business rules directly in the database layer.
+
+For reporting, I used various types of JOINs to combine data from multiple tables. INNER JOINs connected employees with their departments and salaries, while LEFT JOINs helped include attendance data even when some employees had no attendance records. I used aggregate functions like SUM, AVG, and COUNT with GROUP BY to create department-wise summaries and calculate totals. Window functions like ROW_NUMBER() helped rank employees within each department.
+
+The project also involved date calculations using DATEDIFF and DATE_SUB functions to calculate years of service and filter attendance records. I used COALESCE to handle NULL values gracefully in reports. The final system can calculate net salaries, generate comprehensive reports, and provide insights into payroll costs across departments.
+
+This project helped me understand how to translate real-world business requirements into SQL queries and build a complete database solution that handles complex calculations and reporting needs efficiently.
+
